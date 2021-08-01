@@ -2,10 +2,10 @@ package xyz.arunangshu.petclinic.services.map;
 
 import java.util.Set;
 import xyz.arunangshu.petclinic.model.Owner;
-import xyz.arunangshu.petclinic.services.CrudService;
+import xyz.arunangshu.petclinic.services.OwnerService;
 
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements
-    CrudService<Owner, Long> {
+    OwnerService {
 
   @Override
   public Set<Owner> findAll() {
@@ -30,5 +30,10 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements
   @Override
   public void deleteById(Long id) {
     super.deleteById(id);
+  }
+
+  @Override
+  public Owner findByLastName(String lastName) {
+    return null;
   }
 }
