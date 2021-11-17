@@ -6,7 +6,7 @@ import xyz.arunangshu.petclinic.model.Pet;
 import xyz.arunangshu.petclinic.services.PetService;
 
 @Service
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
+public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
 
   @Override
   public Set<Pet> findAll() {
