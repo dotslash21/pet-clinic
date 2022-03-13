@@ -19,5 +19,6 @@ public class Vet extends Person {
     @JoinTable(name = "vet_specialities",
             joinColumns = @JoinColumn(name = "vet_id"),
             inverseJoinColumns = @JoinColumn(name = "speciality_id"))
+    @Builder.Default
     private Set<Specialty> specialties = new HashSet<>();
 }
